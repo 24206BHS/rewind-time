@@ -22,4 +22,14 @@ texture = ExtResource("1_u52ul")
 
 [node name="CharacterBody2D" parent="." unique_id=229392035 instance=ExtResource("2_vonw3")]
 position = Vector2(100, 450)
-motion_mode = 1
+
+[node name="Camera" type="Camera2D" parent="CharacterBody2D" unique_id=39395001]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
+[node name="Timer" type="Timer" parent="." unique_id=707845954]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
