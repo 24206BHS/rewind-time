@@ -1,35 +1,101 @@
 [gd_scene format=3 uid="uid://dkay6rp1wxhfr"]
 
-[ext_resource type="Script" uid="uid://40ahvjwuxsq7" path="res://level.gd" id="1_oi3di"]
-[ext_resource type="Texture2D" uid="uid://che5x2ujttmxv" path="res://icon.svg" id="1_u52ul"]
+[ext_resource type="Script" uid="uid://biuq3rngcpxlj" path="res://Code/level.gd" id="1_oi3di"]
+[ext_resource type="Texture2D" uid="uid://2dnbug8hr2e1" path="res://Pictures/Ground.png" id="2_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://cpolguad2iw22" path="res://player.tscn" id="2_vonw3"]
+[ext_resource type="PackedScene" uid="uid://bqimrsam3n0ft" path="res://Stop_Watch.tscn" id="4_0b4ue"]
+[ext_resource type="PackedScene" uid="uid://bwyx5h2mw503d" path="res://Die.tscn" id="6_1ainy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vonw3"]
-size = Vector2(1000, 20)
+size = Vector2(467, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nom4"]
+size = Vector2(24.008575, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqlx4"]
+size = Vector2(22.9903, 5.8095245)
 
 [node name="Level" type="Node2D" unique_id=766602432]
 script = ExtResource("1_oi3di")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1538635006]
-position = Vector2(500, 500)
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1391274743]
+offset_left = 546.0
+offset_top = 541.0
+offset_right = 757.0
+offset_bottom = 636.0
+text = "Use your clones to create 
+a platform upto 
+the next platform."
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=991700795]
-shape = SubResource("RectangleShape2D_vonw3")
-
-[node name="Icon" type="Sprite2D" parent="StaticBody2D" unique_id=2005761154]
-scale = Vector2(7.75, 0.15)
-texture = ExtResource("1_u52ul")
-
-[node name="CharacterBody2D" parent="." unique_id=229392035 groups=["Playing"] instance=ExtResource("2_vonw3")]
-position = Vector2(100, 450)
+[node name="CharacterBody2D" parent="." unique_id=229392035 instance=ExtResource("2_vonw3")]
+position = Vector2(141, 482)
 
 [node name="Camera" type="Camera2D" parent="CharacterBody2D" unique_id=39395001]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1538635006]
+position = Vector2(500, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=991700795]
+position = Vector2(-218.5, 29.5)
+shape = SubResource("RectangleShape2D_vonw3")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D" unique_id=2005761154]
+texture_filter = 1
+position = Vector2(-242.99998, 42.000008)
+scale = Vector2(19.5625, 6.23125)
+texture = ExtResource("2_0b4ue")
+
 [node name="Timer" type="Timer" parent="." unique_id=707845954]
 wait_time = 5.0
 autostart = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1368008120]
+position = Vector2(141, 482)
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D2" unique_id=1950453217]
+texture_filter = 1
+position = Vector2(632.5, 141)
+scale = Vector2(7.28125, 7.8125)
+texture = ExtResource("2_0b4ue")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=43516715]
+position = Vector2(641.0936, 174.00006)
+scale = Vector2(7.28125, 7.8125)
+shape = SubResource("RectangleShape2D_2nom4")
+
+[node name="Control Instuctions" type="TextEdit" parent="." unique_id=1617232353]
+offset_left = 4.0
+offset_top = 326.0
+offset_right = 172.0
+offset_bottom = 452.0
+text = "R = Restart
+Right Arrow = Right
+Left Arrow = Left
+Space = Jump"
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1103573264]
+position = Vector2(1079, 450)
+scale = Vector2(12.875, 5.25)
+
+[node name="Ground" type="Sprite2D" parent="StaticBody2D3" unique_id=492119560]
+texture_filter = 1
+position = Vector2(-2.407767, 10.285714)
+scale = Vector2(1, 0.99999994)
+texture = ExtResource("2_0b4ue")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1148067790]
+position = Vector2(-0.93203604, 7.2380977)
+scale = Vector2(1, 0.9999996)
+shape = SubResource("RectangleShape2D_bqlx4")
+
+[node name="Stop_Watch" parent="." unique_id=2142194420 instance=ExtResource("4_0b4ue")]
+position = Vector2(323, 348)
+
+[node name="Area2D" parent="." unique_id=1004333656 instance=ExtResource("6_1ainy")]
+position = Vector2(-53, 810)
+scale = Vector2(2.1200004, 1)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

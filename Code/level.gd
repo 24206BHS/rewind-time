@@ -18,3 +18,4 @@ func _on_timer_timeout() -> void:
 	tween.tween_property(child.get_node("Camera"), "position", Vector2.ZERO, 1)
 	cur.remove_from_group("Playing")
 	child.add_to_group("Playing")
+	

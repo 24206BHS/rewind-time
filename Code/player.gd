@@ -8,7 +8,12 @@ var frozen = false
 func _ready() -> void:
 	get_parent().get_node("Timer").timeout.connect(_on_timer_timeout)
 
+
 func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("restart"):
+		get_tree().paused = false # Unfreeze if game was paused
+		get_tree().reload_current_scene()
+		
 	if !frozen:
 		# Add the gravity.
 		if not is_on_floor():
