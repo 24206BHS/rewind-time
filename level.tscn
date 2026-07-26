@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bwyx5h2mw503d" path="res://Die.tscn" id="6_1ainy"]
 [ext_resource type="PackedScene" uid="uid://834sogx45dmq" path="res://Checkpoint.tscn" id="6_n6hdu"]
 [ext_resource type="AudioStream" uid="uid://bt1q2bae81x0l" path="res://Music/5121699674193920 (1).wav" id="7_n6hdu"]
-[ext_resource type="Texture2D" uid="uid://che5x2ujttmxv" path="res://Resources/icon.svg" id="9_8cye3"]
+[ext_resource type="Texture2D" uid="uid://bih1vg7pd68xu" path="res://Resources/Portal.png" id="9_8cye3"]
 [ext_resource type="AudioStream" uid="uid://ckojui4c0wcc7" path="res://Music/random.wav" id="9_i2t4f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nom4"]
@@ -80,7 +80,7 @@ texture = ExtResource("2_km5ld")
 [node name="Background(1)8" type="Sprite2D" parent="." unique_id=552670389]
 modulate = Color(0.627451, 0.627451, 0.627451, 0.6313726)
 texture_filter = 1
-position = Vector2(3835.9998, 405.00003)
+position = Vector2(3874.9998, 455)
 scale = Vector2(2.4233098, 2.7734377)
 texture = ExtResource("2_km5ld")
 
@@ -344,7 +344,9 @@ position = Vector2(3800, 360)
 shape = SubResource("RectangleShape2D_2orkt")
 
 [node name="Icon" type="Sprite2D" parent="Portal" unique_id=1449290405]
-scale = Vector2(0.3, 0.6)
+texture_filter = 1
+position = Vector2(-1.0000896, -1.0000091)
+scale = Vector2(1.0203091, 1.3999985)
 texture = ExtResource("9_8cye3")
 
 [node name="Arrow2" type="ColorRect" parent="." unique_id=1172722402]
