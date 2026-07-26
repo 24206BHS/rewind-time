@@ -29,13 +29,17 @@ size = Vector2(158, 18.5)
 [node name="Level" type="Node2D" unique_id=766602432]
 script = ExtResource("1_oi3di")
 
+[node name="Stop_Watch" parent="." unique_id=2142194420 instance=ExtResource("4_0b4ue")]
+z_index = 1
+position = Vector2(220, -100)
+
 [node name="Label3" type="Label" parent="." unique_id=1238941659]
 offset_left = 1070.0
 offset_top = 315.0
-offset_right = 1570.0
+offset_right = 1300.0
 offset_bottom = 390.0
-text = "This is a checkpoint You will 
-start reseting here once
+text = "This is a checkpoint, you will 
+start resetting here once
 you reach it"
 
 [node name="Label" type="Label" parent="." unique_id=2037854950]
@@ -64,8 +68,16 @@ Right Arrow = Right
 Left Arrow = Left
 Space = Jump"
 
+[node name="Control Instuctions2" type="Label" parent="." unique_id=1027843009]
+offset_left = 261.0
+offset_top = 323.0
+offset_right = 537.0
+offset_bottom = 450.0
+text = "Your body will freeze in place after the 5 second timer is up, when this happens you will be sent back to the start, use this to your advantage!"
+autowrap_mode = 3
+
 [node name="CharacterBody2D" parent="." unique_id=229392035 instance=ExtResource("2_vonw3")]
-position = Vector2(141, 482)
+position = Vector2(250, 482)
 
 [node name="Camera" type="Camera2D" parent="CharacterBody2D" unique_id=39395001]
 zoom = Vector2(2, 2)
@@ -75,7 +87,7 @@ position_smoothing_speed = 10.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1368008120]
 position = Vector2(300, 550)
-scale = Vector2(3, 1)
+scale = Vector2(2.5, 1)
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D" unique_id=1950453217]
 texture_filter = 1
@@ -120,23 +132,22 @@ autostart = true
 
 [node name="Area2D" parent="." unique_id=1004333656 instance=ExtResource("6_1ainy")]
 position = Vector2(-123, 789)
-scale = Vector2(3.2300155, 1.604759)
+scale = Vector2(5, 1.5)
 
-[node name="Area2D2" parent="." unique_id=1040965078 instance=ExtResource("6_n6hdu")]
-position = Vector2(1153.9999, 428.99997)
-scale = Vector2(0.4891519, 0.4891519)
+[node name="Checkpoint" parent="." unique_id=1040965078 instance=ExtResource("6_n6hdu")]
+position = Vector2(1154, 415)
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1192188494]
 position = Vector2(300, 550)
 scale = Vector2(3, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=928699828]
-position = Vector2(359.33334, 6)
+position = Vector2(370.75, 9)
 shape = SubResource("RectangleShape2D_1ainy")
 
 [node name="Ground" type="Sprite2D" parent="StaticBody2D4" unique_id=635897067]
 texture_filter = 1
-position = Vector2(357.3333, 13.999998)
+position = Vector2(368.74997, 16.999998)
 scale = Vector2(1.4010422, 4.25)
 texture = ExtResource("2_0b4ue")
 
@@ -152,7 +163,7 @@ position = Vector2(1773, 559)
 scale = Vector2(8.5, 3.6875)
 texture = ExtResource("2_0b4ue")
 
-[node name="Area2D3" parent="." unique_id=1268319141 instance=ExtResource("6_n6hdu")]
+[node name="Checkpoint2" parent="." unique_id=1268319141 instance=ExtResource("6_n6hdu")]
 position = Vector2(1782, 501)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1270561736]
@@ -184,10 +195,6 @@ position = Vector2(2317, 597)
 scale = Vector2(6.625, 3.53125)
 texture = ExtResource("2_0b4ue")
 
-[node name="Stop_Watch" parent="." unique_id=2142194420 instance=ExtResource("4_0b4ue")]
-z_index = 1
-position = Vector2(220, -100)
-
 [node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=605689931]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" unique_id=755063889]
@@ -200,8 +207,92 @@ position = Vector2(2547, 581)
 scale = Vector2(6.65625, 4.625)
 texture = ExtResource("2_0b4ue")
 
-[node name="Area2D" parent="StaticBody2D8" unique_id=1792542043 instance=ExtResource("6_n6hdu")]
+[node name="Checkpoint3" parent="." unique_id=1792542043 instance=ExtResource("6_n6hdu")]
 position = Vector2(2554, 515)
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="." unique_id=1055900357]
+position = Vector2(3250, 600)
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D9" unique_id=1079864625]
+texture_filter = 1
+position = Vector2(-10, 0)
+scale = Vector2(7.28125, 7.8125)
+texture = ExtResource("2_0b4ue")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9" unique_id=1153650700]
+scale = Vector2(7.28125, 7.8125)
+shape = SubResource("RectangleShape2D_2nom4")
+
+[node name="Checkpoint4" parent="." unique_id=1280652753 instance=ExtResource("6_n6hdu")]
+position = Vector2(3250, 515)
+
+[node name="Label4" type="Label" parent="." unique_id=641770759]
+offset_left = 2650.0
+offset_top = 450.0
+offset_right = 2740.0
+offset_bottom = 473.0
+text = "Keep going!"
+
+[node name="Arrow" type="ColorRect" parent="." unique_id=681441415]
+offset_left = 2660.0
+offset_top = 490.0
+offset_right = 2700.0
+offset_bottom = 495.0
+
+[node name="Arrow2" type="ColorRect" parent="Arrow" unique_id=1097178292]
+layout_mode = 0
+offset_left = 30.0
+offset_top = -12.0
+offset_right = 50.0
+offset_bottom = -7.0
+rotation = 0.7853982
+
+[node name="Arrow3" type="ColorRect" parent="Arrow" unique_id=919600749]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 13.0
+offset_right = 46.0
+offset_bottom = 18.0
+rotation = -0.7853982
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="." unique_id=2123418492]
+position = Vector2(3800, 450)
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D10" unique_id=1790934985]
+texture_filter = 1
+position = Vector2(-10, 0)
+scale = Vector2(7.28125, 7.8125)
+texture = ExtResource("2_0b4ue")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10" unique_id=98353138]
+scale = Vector2(7.28125, 7.8125)
+shape = SubResource("RectangleShape2D_2nom4")
+
+[node name="Checkpoint5" parent="." unique_id=1261727370 instance=ExtResource("6_n6hdu")]
+position = Vector2(3800, 365)
+
+[node name="Arrow2" type="ColorRect" parent="." unique_id=1172722402]
+offset_left = 3350.0
+offset_top = 505.0
+offset_right = 3390.0
+offset_bottom = 510.0
+rotation = -0.43633232
+
+[node name="Arrow2" type="ColorRect" parent="Arrow2" unique_id=280106294]
+layout_mode = 0
+offset_left = 30.0
+offset_top = -12.0
+offset_right = 50.0
+offset_bottom = -7.0
+rotation = 0.7853982
+
+[node name="Arrow3" type="ColorRect" parent="Arrow2" unique_id=1751086866]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 13.0
+offset_right = 46.0
+offset_bottom = 18.0
+rotation = -0.7853982
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
