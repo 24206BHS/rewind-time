@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://cbv8uhmq3ee82"]
+
+[ext_resource type="Texture2D" uid="uid://cmtkhudas3yqd" path="res://Resources/Background (1).png" id="1_8sw8u"]
+[ext_resource type="Script" uid="uid://e2efw607nuue" path="res://win.gd" id="1_co8qc"]
+
+[node name="Win" type="Node2D" unique_id=418212859]
+script = ExtResource("1_co8qc")
+
+[node name="Background(1)2" type="Sprite2D" parent="." unique_id=1994216831]
+modulate = Color(0.627451, 0.627451, 0.627451, 0.6313726)
+texture_filter = 1
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_8sw8u")
+centered = false
+offset = Vector2(0, 8)
+
+[node name="Control" type="Control" parent="." unique_id=2050245073]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control" unique_id=1426695796]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.4
+anchor_right = 0.5
+anchor_bottom = 0.4
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 96
+text = "You win!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Control" unique_id=2086586184]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.6
+anchor_right = 0.5
+anchor_bottom = 0.6
+offset_left = -196.5
+offset_top = -66.0
+offset_right = 196.5
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 32
+text = "Thank you for playing our game jam game"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="Control" unique_id=1468336231]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.75
+anchor_right = 0.5
+anchor_bottom = 0.75
+offset_left = -87.0
+offset_top = -15.5
+offset_right = 87.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Return to main menu"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

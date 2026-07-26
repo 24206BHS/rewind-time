@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://box4tbgqm1lr2" path="res://Checkpoint.png" id="2_j5qqt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0b4ue"]
-size = Vector2(98.65817, 139.0664)
+size = Vector2(50, 139.066)
 
 [node name="Area2D" type="Area2D" unique_id=1040965078]
 scale = Vector2(0.75, 0.75)

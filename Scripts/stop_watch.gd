@@ -10,7 +10,6 @@ func _ready() -> void:
 	get_parent().get_node("Checkpoint2").reset_stopwatch.connect(on_reset_timer)
 	get_parent().get_node("Checkpoint3").reset_stopwatch.connect(on_reset_timer)
 	get_parent().get_node("Checkpoint4").reset_stopwatch.connect(on_reset_timer)
-	get_parent().get_node("Checkpoint5").reset_stopwatch.connect(on_reset_timer)
 	
 	# Wait 1 frame so the Player node can finish loading into the group
 	await get_tree().process_frame
