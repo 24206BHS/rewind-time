@@ -15,35 +15,34 @@ script = ExtResource("1_i4evr")
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1516262256]
 texture_filter = 1
 layout_mode = 0
-offset_right = 1156.0
-offset_bottom = 644.0
+offset_right = 1152.0
+offset_bottom = 648.0
 texture = ExtResource("1_bpoqq")
 
-[node name="Button" type="Button" parent="TextureRect" unique_id=439426408]
+[node name="Button" type="Button" parent="." unique_id=439426408]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.097
-anchor_top = 0.35300002
-anchor_right = 0.097
-anchor_bottom = 0.35300002
-offset_left = 481.86798
-offset_top = 336.492
-offset_right = 545.868
-offset_bottom = 367.492
+anchor_left = 0.5
+anchor_top = 0.85
+anchor_right = 0.6
+anchor_bottom = 0.9
 text = "Play
 "
 
-[node name="TextEdit" type="TextEdit" parent="." unique_id=1937434532]
-layout_mode = 0
-offset_left = 9.0
-offset_top = 502.0
-offset_right = 552.0
-offset_bottom = 675.0
-text = "This is a game where your body clones itself every five secconds 
-and you get telleported back
-to the start you must try and escape
-by using your cloned bodies as platforms.
-Made By: Daniel McGowan, Kobe Gardiner, and Mikaeil Amiri
-"
+[node name="Label" type="Label" parent="." unique_id=293535763]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.99
+anchor_right = 0.01
+anchor_bottom = 0.99
+offset_top = -153.0
+offset_right = 550.0
+grow_vertical = 0
+text = "This is a game where your body freezes in time every five seconds while a new one gets made back at the start. 
+You must try and escape by using your cloned bodies as platforms.
 
-[connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]
+Made in 3 days by 3 year 11 game design students in New Zealand for the GMTK game jam"
+autowrap_mode = 3
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

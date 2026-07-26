@@ -12,8 +12,12 @@ config_version=5
 
 config/name="Rewind time"
 run/main_scene="uid://1pmwqdsw2ess"
-config/features=PackedStringArray("4.7", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Pictures/icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [global_group]
 
