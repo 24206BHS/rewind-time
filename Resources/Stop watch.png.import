@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bskmec54u2j2a"
-path="res://.godot/imported/New Piskel.png-988556e1b41508ed3f75802bcf4c853b.ctex"
+uid="uid://bux0e7gsjvwdm"
+path="res://.godot/imported/Stop watch.png-710718d502515788abbb48a02706ce86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pictures/New Piskel.png"
-dest_files=["res://.godot/imported/New Piskel.png-988556e1b41508ed3f75802bcf4c853b.ctex"]
+source_file="res://Resources/Stop watch.png"
+dest_files=["res://.godot/imported/Stop watch.png-710718d502515788abbb48a02706ce86.ctex"]
 
 [params]
 

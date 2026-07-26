@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdghxlfnc415n"
-path="res://.godot/imported/MonoChrome Person.png-cd7323e16c58607dc4945045ffc78408.ctex"
+uid="uid://2dnbug8hr2e1"
+path="res://.godot/imported/Ground.png-39cd7300f265d44e31c2964bcdb65505.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pictures/MonoChrome Person.png"
-dest_files=["res://.godot/imported/MonoChrome Person.png-cd7323e16c58607dc4945045ffc78408.ctex"]
+source_file="res://Resources/Ground.png"
+dest_files=["res://.godot/imported/Ground.png-39cd7300f265d44e31c2964bcdb65505.ctex"]
 
 [params]
 

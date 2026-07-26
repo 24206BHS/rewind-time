@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bqimrsam3n0ft"]
 
-[ext_resource type="Texture2D" uid="uid://bux0e7gsjvwdm" path="res://Pictures/Stop watch.png" id="1_yckes"]
-[ext_resource type="Script" uid="uid://bppgt24q5iqr2" path="res://Code/stop_watch.gd" id="2_jde8n"]
+[ext_resource type="Texture2D" uid="uid://bux0e7gsjvwdm" path="res://Resources/Stop watch.png" id="1_yckes"]
+[ext_resource type="Script" uid="uid://bppgt24q5iqr2" path="res://Scripts/stop_watch.gd" id="2_jde8n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jde8n"]
 atlas = ExtResource("1_yckes")
@@ -251,7 +251,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7ndef")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Stop Watch",
 "speed": 7.0
 }]
@@ -261,7 +261,6 @@ script = ExtResource("2_jde8n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2086970601]
 texture_filter = 1
-position = Vector2(-11.5, -11.5)
 scale = Vector2(0.8203125, 0.8203125)
 sprite_frames = SubResource("SpriteFrames_y5q1m")
 animation = &"Stop Watch"

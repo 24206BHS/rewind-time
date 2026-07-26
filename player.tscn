@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cpolguad2iw22"]
 
-[ext_resource type="Script" uid="uid://b322kshechfx3" path="res://Code/player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://bdghxlfnc415n" path="res://Pictures/MonoChrome Person.png" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://b322kshechfx3" path="res://Scripts/player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://bdghxlfnc415n" path="res://Resources/Player.png" id="2_onrkg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oi3di"]
 height = 40.0

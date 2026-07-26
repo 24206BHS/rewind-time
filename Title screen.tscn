@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://1pmwqdsw2ess"]
 
-[ext_resource type="Texture2D" uid="uid://bskmec54u2j2a" path="res://Pictures/New Piskel.png" id="1_bpoqq"]
-[ext_resource type="Script" uid="uid://bs32pnhyila52" path="res://Code/title_screen.gd" id="1_i4evr"]
+[ext_resource type="Texture2D" uid="uid://bskmec54u2j2a" path="res://Resources/New Piskel.png" id="1_bpoqq"]
+[ext_resource type="Script" uid="uid://bs32pnhyila52" path="res://Scripts/title_screen.gd" id="1_i4evr"]
 
 [node name="Title screen" type="Control" unique_id=1441123344]
 layout_mode = 3

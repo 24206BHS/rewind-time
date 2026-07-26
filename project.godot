@@ -13,7 +13,7 @@ config_version=5
 config/name="Rewind time"
 run/main_scene="uid://1pmwqdsw2ess"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://Pictures/icon.svg"
+config/icon="res://Resources/icon.svg"
 
 [display]
 
