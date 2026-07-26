@@ -1,6 +1,5 @@
 #checkpoint.gd
 extends  Area2D
-var CheckpointManager
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)

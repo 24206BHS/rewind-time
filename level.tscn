@@ -6,12 +6,37 @@
 [ext_resource type="PackedScene" uid="uid://bqimrsam3n0ft" path="res://Stop_Watch.tscn" id="4_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://bwyx5h2mw503d" path="res://Die.tscn" id="6_1ainy"]
 [ext_resource type="PackedScene" uid="uid://834sogx45dmq" path="res://Checkpoint.tscn" id="6_n6hdu"]
+[ext_resource type="AudioStream" uid="uid://bt1q2bae81x0l" path="res://Music/5121699674193920 (1).wav" id="7_n6hdu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nom4"]
 size = Vector2(24.009, 12)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ainy"]
+size = Vector2(32.666687, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6hdu"]
+size = Vector2(197, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_km5ld"]
+size = Vector2(148.5, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2t4f"]
+size = Vector2(149.5, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cye3"]
+size = Vector2(158, 18.5)
+
 [node name="Level" type="Node2D" unique_id=766602432]
 script = ExtResource("1_oi3di")
+
+[node name="Label3" type="Label" parent="." unique_id=1238941659]
+offset_left = 1070.0
+offset_top = 315.0
+offset_right = 1570.0
+offset_bottom = 390.0
+text = "This is a checkpoint You will 
+start reseting here once
+you reach it"
 
 [node name="Label" type="Label" parent="." unique_id=2037854950]
 offset_left = 802.0
@@ -93,16 +118,90 @@ shape = SubResource("RectangleShape2D_2nom4")
 wait_time = 5.0
 autostart = true
 
+[node name="Area2D" parent="." unique_id=1004333656 instance=ExtResource("6_1ainy")]
+position = Vector2(-123, 789)
+scale = Vector2(3.2300155, 1.604759)
+
+[node name="Area2D2" parent="." unique_id=1040965078 instance=ExtResource("6_n6hdu")]
+position = Vector2(1153.9999, 428.99997)
+scale = Vector2(0.4891519, 0.4891519)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1192188494]
+position = Vector2(300, 550)
+scale = Vector2(3, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=928699828]
+position = Vector2(359.33334, 6)
+shape = SubResource("RectangleShape2D_1ainy")
+
+[node name="Ground" type="Sprite2D" parent="StaticBody2D4" unique_id=635897067]
+texture_filter = 1
+position = Vector2(357.3333, 13.999998)
+scale = Vector2(1.4010422, 4.25)
+texture = ExtResource("2_0b4ue")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=2112609738]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1242863386]
+position = Vector2(1785.5, 543.5)
+shape = SubResource("RectangleShape2D_n6hdu")
+
+[node name="Ground" type="Sprite2D" parent="StaticBody2D5" unique_id=1463054165]
+texture_filter = 1
+position = Vector2(1773, 559)
+scale = Vector2(8.5, 3.6875)
+texture = ExtResource("2_0b4ue")
+
+[node name="Area2D3" parent="." unique_id=1268319141 instance=ExtResource("6_n6hdu")]
+position = Vector2(1782, 501)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1270561736]
+stream = ExtResource("7_n6hdu")
+volume_db = -10.0
+autoplay = true
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=2016110624]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=839202600]
+position = Vector2(2057.75, 547.5)
+shape = SubResource("RectangleShape2D_km5ld")
+
+[node name="Ground" type="Sprite2D" parent="StaticBody2D6" unique_id=1048746728]
+texture_filter = 1
+position = Vector2(2066, 567)
+scale = Vector2(-6.7461576, 4.560005)
+texture = ExtResource("2_0b4ue")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=1490273074]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=1129028075]
+position = Vector2(2328, 590)
+shape = SubResource("RectangleShape2D_i2t4f")
+
+[node name="Ground" type="Sprite2D" parent="StaticBody2D7" unique_id=2131330070]
+texture_filter = 1
+position = Vector2(2317, 597)
+scale = Vector2(6.625, 3.53125)
+texture = ExtResource("2_0b4ue")
+
 [node name="Stop_Watch" parent="." unique_id=2142194420 instance=ExtResource("4_0b4ue")]
 z_index = 1
 position = Vector2(220, -100)
 
-[node name="Area2D" parent="." unique_id=1004333656 instance=ExtResource("6_1ainy")]
-position = Vector2(-53, 810)
-scale = Vector2(2.1200004, 1)
+[node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=605689931]
 
-[node name="Area2D2" parent="." unique_id=1040965078 instance=ExtResource("6_n6hdu")]
-position = Vector2(1153, 400)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" unique_id=755063889]
+position = Vector2(2559, 561.75)
+shape = SubResource("RectangleShape2D_8cye3")
+
+[node name="Ground" type="Sprite2D" parent="StaticBody2D8" unique_id=1689626361]
+texture_filter = 1
+position = Vector2(2547, 581)
+scale = Vector2(6.65625, 4.625)
+texture = ExtResource("2_0b4ue")
+
+[node name="Area2D" parent="StaticBody2D8" unique_id=1792542043 instance=ExtResource("6_n6hdu")]
+position = Vector2(2554, 515)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -11,7 +11,7 @@ func _ready() -> void:
 
 func on_reset_player():
 	var child = player.instantiate()
-	child.position = Vector2(100,450)
+	child.position = CheckpointManager.active_checkpoint_position
 	add_child(child)
 	var cur = get_tree().get_nodes_in_group("Playing")[0]
 	cur.get_node("Camera").reparent(child)
